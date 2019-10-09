@@ -2,5 +2,7 @@
 ToDo List Project for CIS 285 Fall 2019. Superior Group.
 
 
+Dev- Duncan Reid Rodman
 Dev: Zack Awwad
+
 
