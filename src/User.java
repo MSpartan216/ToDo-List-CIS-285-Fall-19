@@ -8,6 +8,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class User {
+	
+	private String userName;
+	private String userPass;
+	private int userPermiss;
+	private int userKey;
+	private ArrayList userData;
+	
 	public static void dbConnect () {
 		try {
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
@@ -34,48 +41,29 @@ public class User {
 			}
 	}
 
+	public String getName () {
+		return userName;
+	}
 	
-
-
-	public boolean getName (String userName) {
-		try {
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-			String path = System.getProperty("user.dir")+"\\"+"ToDoDB.accdb";
-			String url = "jdbc:ucanaccess://"+path;
-			Connection con = DriverManager.getConnection(url);
-			
-			Statement st = con.createStatement();
-			String query="SELECT user_name FROM account WHERE userName='";
-			ResultSet rs = st.executeQuery(query);
-			
-			while(rs.next()) {
-				System.out.println("Name: " + rs.getString(2));
-		}
-			}
-
-
-		
-		catch (Exception ex3) {
-			System.out.println("ERROR");
-		};
-		return true;
+	public String getPass () {
+		return userPass;
 	}
-	public void getPass (String userPass) {
-
-}
-	public void getPermission (int userName) {
-		
+	
+	public int getPermission () {
+		return userPermiss;	
 	}
-	public void setName (String newName) {
-		
+	
+	public void setName (String newName) {	
+		this.userName = newName;
 	}
+	
 	public void setPass (String newPass) {
+		this.userPass = newPass;
 		
 	}
-	public void getKey (String idk) {
-		
-	}
-	public void setKey (String newidk) {
+	
+	public int getKey (int userKey) {
+		return userKey;
 		
 	}
 	
