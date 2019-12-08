@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class UserList {	
 	
 	
-	public static ArrayList<String[]> getTaskList () {
+	public static ArrayList<String[]> getTaskList () { //Returns an arraylist thats a carbon copy of the user_tasks table. (which will contain all the tasks for every user)
 		ArrayList <String[]> taskList = new ArrayList<String[]>();
 		try {
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");

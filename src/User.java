@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement; 
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 
 public class User {
 	
@@ -13,7 +10,6 @@ public class User {
 	private String userPass;
 	private String userPermiss;
 	private String userKey;
-	private ArrayList userData;
 	
 	public static void dbConnect () {
 		try {
