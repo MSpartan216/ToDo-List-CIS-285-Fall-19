@@ -11,8 +11,8 @@ public class User {
 	
 	private String userName;
 	private String userPass;
-	private int userPermiss;
-	private int userKey;
+	private String userPermiss;
+	private String userKey;
 	private ArrayList userData;
 	
 	public static void dbConnect () {
@@ -49,20 +49,20 @@ public class User {
 		return userPass;
 	}
 	
-	public int getPermission () {
+	public String getPermission () {
 		return userPermiss;	
 	}
 	
-	public void setName (String newName) {	
-		this.userName = newName;
+	public void setName (String name) {	
+		this.userName = name;
 	}
 	
-	public void setPass (String newPass) {
-		this.userPass = newPass;
+	public void setPass (String pass) {
+		this.userPass = pass;
 		
 	}
 	
-	public int getKey (int userKey) {
+	public String getKey (String key) {
 		return userKey;
 		
 	}
